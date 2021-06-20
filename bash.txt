@@ -1,0 +1,15 @@
+
+Запрос для получения access_token и refresh_token
+
+// Подставляем: subdomain
+//              id интеграции
+//              секретный код
+//              код авторизации
+//              URI
+
+sudo curl https://####.amocrm.ru/oauth2/access_token -d \
+'{"client_id":"####","client_secret":"####",
+"grant_type":"authorization_code","code":"####",
+"redirect_uri":"http://####/"}' \
+-H 'Content-Type:application/json' \
+-X POST
